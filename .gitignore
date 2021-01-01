@@ -1,0 +1,13 @@
+
+.DS_Store
+.vscode/settings.json
+data/ner_adm03_feb2018.zip
+data/shapefile/NER_adm03_feb2018.cpg
+data/shapefile/NER_adm03_feb2018.dbf
+data/shapefile/NER_adm03_feb2018.prj
+data/shapefile/NER_adm03_feb2018.sbn
+data/shapefile/NER_adm03_feb2018.sbx
+data/shapefile/NER_adm03_feb2018.shp
+data/shapefile/NER_adm03_feb2018.shp.xml
+data/shapefile/NER_adm03_feb2018.shx
+Résultats_niger.twb
