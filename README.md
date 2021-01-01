@@ -1,4 +1,4 @@
-# resultats_election_niger_2020
+# Résultats de l'éléction présidentielle nigérienne 2020
 Ce repo est un simple ensemble de scripts qui extraient les données publiées par la CENI, pour pouvoir en faciliter la visualisation et l'analyse.
 
 Les données sont donc extraites depuis : https://www.ceniniger.org/presidentielle/
