@@ -6,7 +6,7 @@ import time
 import traceback
 
 url = "https://www.ceniniger.org/presidentielle"
-communes = pd.read_csv("../data/communes.csv", sep = ";")
+communes = pd.read_csv("../data/communes.csv")
 
 #%%
 def parse_results_table(results_page):
@@ -67,7 +67,7 @@ def get_commune_results(commune_id):
         try:
             results_page = requests.get(url_result)
             page_not_read = False
-        except ConnectionError :
+        except :
             time.sleep(30)
             continue
     print("Page read - processing")
@@ -106,5 +106,8 @@ out = results.merge(communes, left_on="commune_id", right_on="comm_ID")
 # %%
 out.to_csv("../data/niger_2020_results.csv")
 # %%
-out.candidats
+out.value = pd.to_numeric(out.value)
+winner = out.groupby(["comm_name"]).apply(lambda x: x[x.value == x.value.max()]).reset_index(drop=True)
+# %%
+winner.to_csv("../data/winner.csv")
 # %%
